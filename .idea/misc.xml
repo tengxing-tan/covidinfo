@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_add_positive_case_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_covid19_info.xml" value="0.134375" />
+        <entry key="app/src/main/res/layout/activity_covid19_information.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_add_positive_case_page.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_covid19_info.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

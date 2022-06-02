@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">covidinfo</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <!-- my string -->
+    <string name="population_vaccinated">Population Vaccinated</string>
+    <string name="daily_administered">Daily - Administered</string>
+    <string name="daily_1st_dose">Daily - 1st Dose</string>
+    <string name="daily_2nd_dose">Daily - 2nd Dose</string>
+    <string name="total_administered">Total - Administered</string>
+    <string name="total_ad_least_1_dose">Total - Ad least 1 Dose</string>
+    <string name="total_2_dose">Total - 2 Dose</string>
+    <string name="button">Button</string>
+    <string name="active_covid_19_cases">Active COVID-19 Cases</string>
+</resources>
