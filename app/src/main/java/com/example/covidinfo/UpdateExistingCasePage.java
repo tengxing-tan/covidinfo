@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AddPositiveCasePage extends AppCompatActivity {
+public class UpdateExistingCasePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_positive_case_page);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);        
+        setContentView(R.layout.activity_update_existing_case_page);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
