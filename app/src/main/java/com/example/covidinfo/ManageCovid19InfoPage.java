@@ -41,7 +41,7 @@ public class ManageCovid19InfoPage extends AppCompatActivity {
         goToPublishCovid19Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ManageCovid19InfoPage.this, PublishCovid19Info.class);
+                Intent intent = new Intent(ManageCovid19InfoPage.this, PublishCovid19InfoPage.class);
                 startActivity(intent);
             }
         });

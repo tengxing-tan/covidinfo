@@ -22,16 +22,7 @@ public class MainActivity extends AppCompatActivity {
         goToCovidInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Covid19Info.class);
-                startActivity(intent);
-            }
-        });
-
-        goToCovidNews = (Button) findViewById(R.id.buttonGoToCovidNews);
-        goToCovidNews.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Covid19Information.class);
+                Intent intent = new Intent(MainActivity.this, Covid19InfoPage.class);
                 startActivity(intent);
             }
         });

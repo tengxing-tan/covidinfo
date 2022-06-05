@@ -10,6 +10,5 @@
     <string name="total_administered">Total - Administered</string>
     <string name="total_ad_least_1_dose">Total - Ad least 1 Dose</string>
     <string name="total_2_dose">Total - 2 Dose</string>
-    <string name="button">Button</string>
     <string name="active_covid_19_cases">Active COVID-19 Cases</string>
 </resources>

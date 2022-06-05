@@ -1,46 +1,39 @@
 package Model;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+public class Covid19InfoModel {
+    // variables
+    private String covid19InfoTitle;
+    private String covid19InfoDate;
+    private String covid19InfoContent;
 
-import androidx.annotation.Nullable;
-
-public class Covid19InfoModel extends SQLiteOpenHelper {
-
-    private Context context;
-    private static final String DATABASE_NAME = "EHealth.db";
-    private static final int DATABASE_VERSION = 1;
-
-    private static final String TABLE_NAME = "covid19Case";
-    private static final String COLUMN_ID = "_id";
-    private static final String COLUMN_PATIENT = "patientID";
-    private static final String COLUMN_CASE_TYPE = "caseType";
-    private static final String COLUMN_CASE = "isActiveCase";
-    private static final String COLUMN_ACTIVE = "activeDate";
-    private static final String COLUMN_RECOVERY = "recoveryDate";
-
-
-    public Covid19InfoModel(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.context = context;
+    // Contructor
+    public Covid19InfoModel(String title, String date, String content) {
+        this.covid19InfoTitle = title;
+        this.covid19InfoDate = date;
+        this.covid19InfoContent = content;
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String query =
-            "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_PATIENT + " TEXT,  " +
-                    COLUMN_CASE_TYPE + " TEXT, " +
-                    COLUMN_CASE + " INTEGER, " +
-                    COLUMN_ACTIVE + " DATE, " +
-                    COLUMN_RECOVERY + " DATE);";
-        db.execSQL(query);
+    public String getCovid19InfoTitle() {
+        return covid19InfoTitle;
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-        onCreate(db);
+    public void setCovid19InfoTitle(String covid19InfoTitle) {
+        this.covid19InfoTitle = covid19InfoTitle;
+    }
+
+    public String getCovid19InfoDate() {
+        return covid19InfoDate;
+    }
+
+    public void setCovid19InfoDate(String covid19InfoDate) {
+        this.covid19InfoDate = covid19InfoDate;
+    }
+
+    public String getCovid19InfoContent() {
+        return covid19InfoContent;
+    }
+
+    public void setCovid19InfoContent(String covid19InfoContent) {
+        this.covid19InfoContent = covid19InfoContent;
     }
 }

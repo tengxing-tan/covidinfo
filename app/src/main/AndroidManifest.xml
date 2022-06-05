@@ -24,16 +24,14 @@
             android:exported="false"
             android:parentActivityName=".ManageCovid19InfoPage" />
             <activity
-                android:name=".PublishCovid19Info"
+                android:name=".PublishCovid19InfoPage"
                 android:exported="false"
                 android:parentActivityName=".ManageCovid19InfoPage" />
+
+
         <!--           USER PAGE: COVID INFO & NOTIFICATION MESSAGE -->
         <activity
-            android:name=".Covid19Information"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Covid19Info"
+            android:name=".Covid19InfoPage"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
