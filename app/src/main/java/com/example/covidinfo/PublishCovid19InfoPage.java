@@ -1,5 +1,6 @@
 package com.example.covidinfo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,10 @@ public class PublishCovid19InfoPage extends AppCompatActivity {
                 date,
                 inputContent.getText().toString().trim()
             );
+
+            // launching our main activity.
+            Intent i = new Intent(PublishCovid19InfoPage.this, ManageCovid19InfoPage.class);
+            startActivity(i);
         });
     }
 }

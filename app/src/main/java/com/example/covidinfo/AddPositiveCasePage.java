@@ -6,9 +6,12 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Objects;
 
-import Model.Covid19CaseModel;
+import Model.Covid19CaseRecord;
 
 public class AddPositiveCasePage extends AppCompatActivity {
 
@@ -24,18 +27,21 @@ public class AddPositiveCasePage extends AppCompatActivity {
         inputIcNumber = findViewById(R.id.inputIcNumber);
         inputCaseType = findViewById(R.id.inputCaseType);
         inputDate = findViewById(R.id.inputDate);
-        // inputName = findViewById(R.id.inputName);
-        // inputGender = findViewById(R.id.inputGender);
-        // inputPhoneNum = findViewById(R.id.inputPhoneNum);
-        // inputAddress = findViewById(R.id.inputAddress);
+
+        // get date today
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar obj = Calendar.getInstance();
+        String today = formatter.format(obj.getTime());
+
+        inputDate.setText(today);
 
         add_button = findViewById(R.id.add_button);
         add_button.setOnClickListener(view -> {
-            Covid19CaseModel myDB = new Covid19CaseModel(AddPositiveCasePage.this);
+            Covid19CaseRecord myDB = new Covid19CaseRecord(AddPositiveCasePage.this);
             myDB.addPositiveCase(
-                    inputIcNumber.getText().toString().trim(),
-                    inputCaseType.getText().toString().trim(),
-                    inputDate.getText().toString().trim()
+                inputIcNumber.getText().toString().trim(),
+                inputDate.getText().toString().trim(),
+                inputCaseType.getText().toString().trim()
             );
         });
     }

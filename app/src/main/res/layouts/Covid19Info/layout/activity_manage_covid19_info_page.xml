@@ -4,40 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5E3F8"
     tools:context=".ManageCovid19InfoPage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Manage Covid-19 Cases"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonAddPositiveCase"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="add positive case"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPublishCovid19Info" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/buttonUpdateExtistingCase"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="update existing case"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonAddPositiveCase" />
 
-    <Button
-        android:id="@+id/buttonPublishCovid19Info"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginTop="24dp"
-        android:text="publish covid-19 information"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-        <!-- COVID-19 INFORMATION -->
+    <!-- COVID-19 INFORMATION -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="379dp"
         android:layout_height="413dp"
@@ -84,6 +89,16 @@
                 android:layout_marginTop="16dp"
                 android:background="#FFFFFF" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonPublishCovid19Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

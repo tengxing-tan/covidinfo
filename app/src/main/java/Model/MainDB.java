@@ -23,7 +23,7 @@ public class MainDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // method to execute sql query
-        db.execSQL("CREATE TABLE covid19Case (ID INTEGER PRIMARY KEY AUTOINCREMENT, patientID TEXT, caseType TEXT, activeDate TEXT, isActiveCase INTEGER, recoveryDate TEXT);");
+        db.execSQL("CREATE TABLE covid19Case (ID INTEGER PRIMARY KEY AUTOINCREMENT, patientID TEXT, activeDate TEXT, caseType TEXT, isActiveCase INTEGER, recoveryDate TEXT);");
         db.execSQL("CREATE TABLE covid19Info (ID INTEGER PRIMARY KEY AUTOINCREMENT, covidInfoTitle TEXT, covidInfoDate TEXT, covidInfoContent TEXT);");
     }
 
