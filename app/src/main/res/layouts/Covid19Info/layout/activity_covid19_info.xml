@@ -8,6 +8,7 @@
     android:background="#F5E3F8"
     tools:context=".Covid19InfoPage">
 
+    <!-- ACTIVE COVID-19 CASES -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="363dp"
@@ -137,6 +138,8 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <!-- COVID-19 INFORMATION -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="379dp"
         android:layout_height="413dp"

@@ -1,11 +1,18 @@
 package com.example.covidinfo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.ArrayList;
+
+import Model.Covid19InfoModel;
+import Model.Covid19InfoRecord;
 
 public class ManageCovid19InfoPage extends AppCompatActivity {
 
@@ -45,6 +52,27 @@ public class ManageCovid19InfoPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        /**
+            Read & display list of Covid-19 information
+        */
+        // initializing our all variables
+        ArrayList<Covid19InfoModel> covid19InfoModelArrayList = new ArrayList<>();
+        Covid19InfoRecord db = new Covid19InfoRecord(ManageCovid19InfoPage.this);
+
+        // get array
+        covid19InfoModelArrayList = db.readCovid19Info();
+
+        // passing array into adapter
+        UpdateCovid19InfoAdapter adapter = new UpdateCovid19InfoAdapter(covid19InfoModelArrayList, ManageCovid19InfoPage.this);
+        RecyclerView rv = findViewById(R.id.rvCovid19Info);
+
+        // setting layout manager for recycler view
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ManageCovid19InfoPage.this, RecyclerView.VERTICAL, false);
+        rv.setLayoutManager(linearLayoutManager);
+
+        // setting our adapter to recycler view.
+        rv.setAdapter(adapter);
     }
 
 }

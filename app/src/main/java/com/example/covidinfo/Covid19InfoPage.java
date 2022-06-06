@@ -19,6 +19,9 @@ public class Covid19InfoPage extends AppCompatActivity {
         setContentView(R.layout.activity_covid19_info);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        /**
+            Read & display list of Covid-19 information
+        */
         // initializing our all variables
         ArrayList<Covid19InfoModel> covid19InfoModelArrayList = new ArrayList<>();
         Covid19InfoRecord db = new Covid19InfoRecord(Covid19InfoPage.this);

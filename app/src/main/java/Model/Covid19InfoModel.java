@@ -2,12 +2,14 @@ package Model;
 
 public class Covid19InfoModel {
     // variables
+    private int id;
     private String covid19InfoTitle;
     private String covid19InfoDate;
     private String covid19InfoContent;
 
-    // Contructor
-    public Covid19InfoModel(String title, String date, String content) {
+    // Constructor
+    public Covid19InfoModel(int id, String title, String date, String content) {
+        this.id = id;
         this.covid19InfoTitle = title;
         this.covid19InfoDate = date;
         this.covid19InfoContent = content;
@@ -35,5 +37,13 @@ public class Covid19InfoModel {
 
     public void setCovid19InfoContent(String covid19InfoContent) {
         this.covid19InfoContent = covid19InfoContent;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

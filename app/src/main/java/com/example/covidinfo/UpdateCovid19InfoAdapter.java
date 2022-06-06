@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 import Model.Covid19InfoModel;
 
-public class Covid19InfoAdapter extends RecyclerView.Adapter<Covid19InfoAdapter.ViewHolder> {
+public class UpdateCovid19InfoAdapter extends RecyclerView.Adapter<UpdateCovid19InfoAdapter.ViewHolder> {
 
     private ArrayList<Covid19InfoModel> covid19InfoModelArrayList;
     private Context context;
 
     // constructor
-    Covid19InfoAdapter(ArrayList<Covid19InfoModel> covid19InfoModelArrayList, Context context) {
+    UpdateCovid19InfoAdapter(ArrayList<Covid19InfoModel> covid19InfoModelArrayList, Context context) {
         this.covid19InfoModelArrayList = covid19InfoModelArrayList;
         this.context = context;
     }
@@ -46,6 +46,24 @@ public class Covid19InfoAdapter extends RecyclerView.Adapter<Covid19InfoAdapter.
         holder.title_txt.setText(model.getCovid19InfoTitle());
         holder.date_txt.setText(model.getCovid19InfoDate());
         holder.content_txt.setText(model.getCovid19InfoContent());
+
+        // make rc view clickable and user can edit covid title and content
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            // on below line we are calling an intent.
+            Intent i = new Intent(context, UpdateCovid19InfoPage.class);
+
+            // below we are passing all our values.
+            i.putExtra("id", model.getId());
+            i.putExtra("title", model.getCovid19InfoTitle());
+            i.putExtra("content", model.getCovid19InfoContent());
+
+            // starting our activity.
+            context.startActivity(i);
+        }
+    });
     }
 
     @Override

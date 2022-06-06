@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covidinfo">
-
-        <!--           MANAGE COVID-19 INFO PAGE -->
+        <!-- MANAGE COVID-19 INFO PAGE -->
         <activity
             android:name=".ManageCovid19InfoPage"
             android:exported="true"
@@ -19,17 +18,23 @@
             android:name=".AddPositiveCasePage"
             android:exported="false"
             android:parentActivityName=".ManageCovid19InfoPage" />
+        
         <activity
             android:name=".UpdateExistingCasePage"
             android:exported="false"
             android:parentActivityName=".ManageCovid19InfoPage" />
-            <activity
-                android:name=".PublishCovid19InfoPage"
-                android:exported="false"
-                android:parentActivityName=".ManageCovid19InfoPage" />
-
-
-        <!--           USER PAGE: COVID INFO & NOTIFICATION MESSAGE -->
+        <activity
+            android:name=".PublishCovid19InfoPage"
+            android:exported="false"
+            android:parentActivityName=".ManageCovid19InfoPage" />
+        <activity
+            android:name=".UpdateCovid19InfoPage"
+            android:exported="false"
+            android:parentActivityName=".ManageCovid19InfoPage" />
+        
+        <!-- 
+            USER PAGE: COVID INFO & NOTIFICATION MESSAGE 
+        -->
         <activity
             android:name=".Covid19InfoPage"
             android:exported="false"
