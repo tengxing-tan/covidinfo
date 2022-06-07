@@ -1,10 +1,13 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.EHealth.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -43,6 +46,10 @@ public class AddPositiveCasePage extends AppCompatActivity {
                 inputDate.getText().toString().trim(),
                 inputCaseType.getText().toString().trim()
             );
+
+            // launching our main activity.
+                Intent i = new Intent(AddPositiveCasePage.this, ManageCovid19InfoPage.class);
+                startActivity(i);
         });
     }
 

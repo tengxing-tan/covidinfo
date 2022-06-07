@@ -1,4 +1,4 @@
-package Model;
+package com.example.EHealth.Covid19Info;
 
 import android.content.Context;
 
@@ -14,18 +14,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.covidinfo.R;
-import com.example.covidinfo.UpdateExistingCasePage;
+import com.example.EHealth.R;
 
 import java.util.ArrayList;
 
-public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19CaseAdapter.ViewHolder> {
-     private ArrayList<Covid19CaseModel> covid19CaseModelArrayList;
+import Model.Covid19InfoModel;
+
+public class UpdateCovid19InfoAdapter extends RecyclerView.Adapter<UpdateCovid19InfoAdapter.ViewHolder> {
+
+    private ArrayList<Covid19InfoModel> covid19InfoModelArrayList;
     private Context context;
 
     // constructor
-    public UpdateCovid19CaseAdapter(ArrayList<Covid19CaseModel> covid19CaseModelArrayList, Context context) {
-        this.covid19CaseModelArrayList = covid19CaseModelArrayList;
+    UpdateCovid19InfoAdapter(ArrayList<Covid19InfoModel> covid19InfoModelArrayList, Context context) {
+        this.covid19InfoModelArrayList = covid19InfoModelArrayList;
         this.context = context;
     }
 
@@ -34,19 +36,18 @@ public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // on below line we are inflating our layout
         // file for our recycler view items.
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rcviewe_covid19_case, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rcview_covid19_info, parent, false);
         return new ViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        Covid19CaseModel model = covid19CaseModelArrayList.get(position);
+        Covid19InfoModel model = covid19InfoModelArrayList.get(position);
         // display covid info
-        holder.ic_number_txt.setText(model.getPatientID());
-        holder.date_txt.setText(model.getActiveDate());
-        holder.case_type_txt.setText(model.getCaseType());
-        holder.is_active_txt.setText((model.getIsActive() != 0) ? "(active)" : "(inactive)");
+        holder.title_txt.setText(model.getCovid19InfoTitle());
+        holder.date_txt.setText(model.getCovid19InfoDate());
+        holder.content_txt.setText(model.getCovid19InfoContent());
 
         // make rc view clickable and user can edit covid title and content
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -54,13 +55,12 @@ public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19
         public void onClick(View v) {
 
             // on below line we are calling an intent.
-            Intent i = new Intent(context, UpdateExistingCasePage.class);
+            Intent i = new Intent(context, UpdateCovid19InfoPage.class);
 
             // below we are passing all our values.
             i.putExtra("id", model.getId());
-            i.putExtra("patientID", model.getPatientID());
-            i.putExtra("activeDate", model.getActiveDate());
-            i.putExtra("caseType", model.getCaseType());
+            i.putExtra("title", model.getCovid19InfoTitle());
+            i.putExtra("content", model.getCovid19InfoContent());
 
             // starting our activity.
             context.startActivity(i);
@@ -71,21 +71,20 @@ public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19
     @Override
     public int getItemCount() {
         // returning the size of our array list
-        return covid19CaseModelArrayList.size();
+        return covid19InfoModelArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView ic_number_txt, date_txt, case_type_txt, is_active_txt;
+        TextView title_txt, date_txt, content_txt;
         LinearLayout mainLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing our text views
-            ic_number_txt = itemView.findViewById(R.id.ic_number_txt);
+            title_txt = itemView.findViewById(R.id.title_txt);
             date_txt = itemView.findViewById(R.id.date_txt);
-            case_type_txt = itemView.findViewById(R.id.case_type_txt);
-            is_active_txt = itemView.findViewById(R.id.is_active_txt);
+            content_txt = itemView.findViewById(R.id.content_txt);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }

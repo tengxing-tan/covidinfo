@@ -1,4 +1,4 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.EHealth.R;
 
 import java.util.ArrayList;
 

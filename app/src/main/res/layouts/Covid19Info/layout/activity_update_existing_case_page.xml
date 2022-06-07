@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5E3F8"
-    tools:context=".UpdateExistingCasePage">
+    tools:context=".Covid19Info.UpdateExistingCasePage">
 
    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="375dp"
@@ -62,7 +62,7 @@
            android:ems="10"
            android:inputType="date"
            android:minHeight="48dp"
-           android:text="2022-12-12"
+           android:hint="2022-12-12"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/textView30" />

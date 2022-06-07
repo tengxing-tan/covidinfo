@@ -1,4 +1,4 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.EHealth.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

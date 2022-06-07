@@ -1,4 +1,4 @@
-package com.example.covidinfo;
+package com.example.EHealth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.EHealth.Covid19Info.Covid19InfoPage;
+import com.example.EHealth.Covid19Info.ManageCovid19InfoPage;
+
 public class MainActivity extends AppCompatActivity {
 
     Button goToCovidInfo;
-    Button goToCovidNews;
     Button goToManageCovidInfo;
 
     @Override

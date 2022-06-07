@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5E3F8"
-    tools:context=".PublishCovid19InfoPage">
+    tools:context=".Covid19Info.PublishCovid19InfoPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"

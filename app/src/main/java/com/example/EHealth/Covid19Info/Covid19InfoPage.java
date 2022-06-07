@@ -1,23 +1,42 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.TextView;
+
+import com.example.EHealth.R;
 
 import java.util.ArrayList;
 
+import Model.Covid19CaseRecord;
 import Model.Covid19InfoModel;
 import Model.Covid19InfoRecord;
 
 public class Covid19InfoPage extends AppCompatActivity {
+
+    private TextView localCases, importCases, activeCases;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_covid19_info);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        /**
+         Read & display Covid-19 Cases
+         */
+        localCases = findViewById(R.id.localCases);
+        importCases = findViewById(R.id.importCases);
+        activeCases = findViewById(R.id.activeCases);
+
+        Covid19CaseRecord caseRecord = new Covid19CaseRecord(Covid19InfoPage.this);
+
+        localCases.setText(String.valueOf(caseRecord.getTotalBasedCaseType("Local")));
+        importCases.setText(String.valueOf(caseRecord.getTotalBasedCaseType("Import")));
+        activeCases.setText(String.valueOf(caseRecord.getTotalActiveCases()));
 
         /**
             Read & display list of Covid-19 information

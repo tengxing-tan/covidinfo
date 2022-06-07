@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="12dp"
     android:background="#F5E3F8"
-    tools:context=".Covid19InfoPage">
+    tools:context=".Covid19Info.Covid19InfoPage">
 
     <!-- ACTIVE COVID-19 CASES -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/localCases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -51,19 +51,6 @@
             android:text="4,465,450"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:background="#C4C4C4"
-            android:padding="2dp"
-            android:text="+1,644"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textView15"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
@@ -75,10 +62,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintTop_toBottomOf="@+id/localCases" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/importCases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -86,19 +73,6 @@
             android:text="4,465,450"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:background="#C4C4C4"
-            android:padding="2dp"
-            android:text="+1,644"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <TextView
@@ -110,10 +84,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintTop_toBottomOf="@+id/importCases" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/activeCases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -121,19 +95,6 @@
             android:text="4,465,450"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:background="#C4C4C4"
-            android:padding="2dp"
-            android:text="+1,644"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

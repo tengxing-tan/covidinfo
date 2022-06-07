@@ -3,6 +3,7 @@ package Model;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class Covid19CaseRecord {
         CREATE
     */
     // method: add positive case
-    public void addPositiveCase(String icNumber, String caseType, String date) {
+    public void addPositiveCase(String icNumber, String date, String caseType) {
        
         // create variable for our sqlite database
         // call method to write database
@@ -64,7 +65,7 @@ public class Covid19CaseRecord {
     /**
         READ 
     */
-    // method: get total active case
+    // method: get all covid-19 case
     public ArrayList<Covid19CaseModel> readCovid19Case() {
 
         SQLiteDatabase db = mainDB.getReadableDatabase();
@@ -85,6 +86,38 @@ public class Covid19CaseRecord {
         // and returning our array list.
         cursorCovid19Case.close();
         return covid19CaseRecordArrayList;
+    }
+
+    // method: get total case according to case type (local / import)
+    public int getTotalBasedCaseType(String caseType) {
+
+        int totalCases = 0;
+        SQLiteDatabase db = mainDB.getReadableDatabase();
+
+        try {
+            totalCases = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME, "caseType=?", new String[] {caseType});
+//            Toast.makeText(context, "total get", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
+        return totalCases;
+    }
+
+    // method: get total active
+    public int getTotalActiveCases() {
+
+        int totalActiveCases = 0;
+        SQLiteDatabase db = mainDB.getReadableDatabase();
+
+        try {
+            totalActiveCases = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME, "isActiveCase=?", new String[] {"1"});
+//            Toast.makeText(context, "total get", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
+        return totalActiveCases;
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.EHealth.R;
+
 import java.util.ArrayList;
 
 import Model.Covid19CaseModel;
 import Model.Covid19CaseRecord;
-import Model.UpdateCovid19CaseAdapter;
 
 public class Covid19CasesListPage extends AppCompatActivity {
 

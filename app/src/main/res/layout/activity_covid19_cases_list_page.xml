@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5E3F8"
-    tools:context=".Covid19CasesListPage">
+    tools:context=".Covid19Info.Covid19CasesListPage">
 
     <!-- COVID-19 CASES LIST -->
 

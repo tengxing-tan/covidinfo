@@ -1,8 +1,6 @@
-package com.example.covidinfo;
+package com.example.EHealth.Covid19Info;
 
 import android.content.Context;
-
-import android.content.Intent;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,17 +12,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.EHealth.R;
+
 import java.util.ArrayList;
 
 import Model.Covid19InfoModel;
 
-public class UpdateCovid19InfoAdapter extends RecyclerView.Adapter<UpdateCovid19InfoAdapter.ViewHolder> {
+public class Covid19InfoAdapter extends RecyclerView.Adapter<Covid19InfoAdapter.ViewHolder> {
 
     private ArrayList<Covid19InfoModel> covid19InfoModelArrayList;
     private Context context;
 
     // constructor
-    UpdateCovid19InfoAdapter(ArrayList<Covid19InfoModel> covid19InfoModelArrayList, Context context) {
+    Covid19InfoAdapter(ArrayList<Covid19InfoModel> covid19InfoModelArrayList, Context context) {
         this.covid19InfoModelArrayList = covid19InfoModelArrayList;
         this.context = context;
     }
@@ -46,24 +46,6 @@ public class UpdateCovid19InfoAdapter extends RecyclerView.Adapter<UpdateCovid19
         holder.title_txt.setText(model.getCovid19InfoTitle());
         holder.date_txt.setText(model.getCovid19InfoDate());
         holder.content_txt.setText(model.getCovid19InfoContent());
-
-        // make rc view clickable and user can edit covid title and content
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            // on below line we are calling an intent.
-            Intent i = new Intent(context, UpdateCovid19InfoPage.class);
-
-            // below we are passing all our values.
-            i.putExtra("id", model.getId());
-            i.putExtra("title", model.getCovid19InfoTitle());
-            i.putExtra("content", model.getCovid19InfoContent());
-
-            // starting our activity.
-            context.startActivity(i);
-        }
-    });
     }
 
     @Override

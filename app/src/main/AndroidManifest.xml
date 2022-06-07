@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.covidinfo">
+    package="com.example.EHealth">
 
     <application
         android:allowBackup="true"
@@ -12,36 +12,36 @@
         
         <!-- MANAGE COVID-19 INFO PAGE -->
         <activity
-            android:name=".ManageCovid19InfoPage"
+            android:name="com.example.EHealth.Covid19Info.ManageCovid19InfoPage"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.example.EHealth.MainActivity" />
         <activity
-            android:name=".AddPositiveCasePage"
+            android:name="com.example.EHealth.Covid19Info.AddPositiveCasePage"
             android:exported="false"
-            android:parentActivityName=".ManageCovid19InfoPage" />
+            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
         <activity
-            android:name=".Covid19CasesListPage"
+            android:name="com.example.EHealth.Covid19Info.Covid19CasesListPage"
             android:exported="false"
-            android:parentActivityName=".ManageCovid19InfoPage" />
+            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
         <activity
-            android:name=".UpdateExistingCasePage"
+            android:name="com.example.EHealth.Covid19Info.UpdateExistingCasePage"
             android:exported="false"
-            android:parentActivityName=".ManageCovid19InfoPage" />
+            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
         <activity
-            android:name=".PublishCovid19InfoPage"
+            android:name="com.example.EHealth.Covid19Info.PublishCovid19InfoPage"
             android:exported="false"
-            android:parentActivityName=".ManageCovid19InfoPage" />
+            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
         <activity
-            android:name=".UpdateCovid19InfoPage"
+            android:name="com.example.EHealth.Covid19Info.UpdateCovid19InfoPage"
             android:exported="false"
-            android:parentActivityName=".ManageCovid19InfoPage" />
+            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
         <!--             USER PAGE: COVID INFO & NOTIFICATION MESSAGE  -->
         <activity
-            android:name=".Covid19InfoPage"
+            android:name="com.example.EHealth.Covid19Info.Covid19InfoPage"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.example.EHealth.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.EHealth.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
