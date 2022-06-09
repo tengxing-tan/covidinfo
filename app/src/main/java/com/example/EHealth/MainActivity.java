@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        goToCovidInfo = (Button)findViewById(R.id.button);
+        goToCovidInfo = (Button)findViewById(R.id.buttonGotoCovidInfo);
         goToCovidInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
