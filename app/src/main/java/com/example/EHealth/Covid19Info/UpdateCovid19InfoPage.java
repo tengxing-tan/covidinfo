@@ -28,7 +28,7 @@ public class UpdateCovid19InfoPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_covid19_info_page);
+        setContentView(R.layout.update_covid19_info_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // initializing variables

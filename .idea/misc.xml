@@ -3,12 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/View/Covid19Info/drawable/ic_baseline_house.xml" value="0.123" />
+        <entry key="app/src/main/res/View/Covid19Info/layout/activity_add_positive_case_page.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/View/Covid19Info/layout/activity_covid19_info.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/View/Covid19Info/layout/activity_manage_covid19_info_page.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/View/Covid19Info/layout/activity_publish_covid19_info.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/View/Covid19Info/layout/activity_update_existing_case_page.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_round_article.xml" value="0.123" />
+        <entry key="app/src/main/res/drawable/ic_round_sensor_door.xml" value="0.133" />
         <entry key="app/src/main/res/layout/activity_add_positive_case_page.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_covid19_cases_list_page.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/activity_covid19_info.xml" value="0.134375" />
         <entry key="app/src/main/res/layout/activity_covid19_information.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main_staff.xml" value="0.134375" />
         <entry key="app/src/main/res/layout/activity_manage_covid19_info_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_publish_covid19_info.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_update_covid19_info_page.xml" value="0.25" />
@@ -20,14 +29,19 @@
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/main_staff.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/main_user.xml" value="0.25" />
         <entry key="app/src/main/res/layout/rcview_covid19_info.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/rcviewe_covid19_case.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/rcviewe_covid19_case.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_add_positive_case_page.xml" value="0.22" />
+        <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_covid19_cases_list_page.xml" value="0.134375" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_covid19_info.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_covid19_information.xml" value="0.1518987341772152" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_manage_covid19_info_page.xml" value="0.2" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_publish_covid19_info.xml" value="0.25" />
+        <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_update_covid19_info_page.xml" value="0.134375" />
         <entry key="app/src/main/res/layouts/Covid19Info/layout/activity_update_existing_case_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layouts/Covid19Info/layout/add_positive_case_page.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>

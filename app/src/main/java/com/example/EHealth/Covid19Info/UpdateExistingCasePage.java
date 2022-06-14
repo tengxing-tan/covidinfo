@@ -28,7 +28,7 @@ public class UpdateExistingCasePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_existing_case_page);
+        setContentView(R.layout.update_existing_case_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // initializing variables

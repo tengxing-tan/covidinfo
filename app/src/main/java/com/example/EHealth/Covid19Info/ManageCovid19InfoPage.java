@@ -25,7 +25,7 @@ public class ManageCovid19InfoPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_covid19_info_page);
+        setContentView(R.layout.manage_covid19_info_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         goToAddPositiveCase = (Button) findViewById(R.id.buttonAddPositiveCase);
@@ -69,11 +69,11 @@ public class ManageCovid19InfoPage extends AppCompatActivity {
         UpdateCovid19InfoAdapter adapter = new UpdateCovid19InfoAdapter(covid19InfoModelArrayList, ManageCovid19InfoPage.this);
         RecyclerView rv = findViewById(R.id.rvCovid19Info);
 
-        // setting layout manager for recycler view
+        // setting layout manager for recycler layouts
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ManageCovid19InfoPage.this, RecyclerView.VERTICAL, false);
         rv.setLayoutManager(linearLayoutManager);
 
-        // setting our adapter to recycler view.
+        // setting our adapter to recycler layouts.
         rv.setAdapter(adapter);
     }
 

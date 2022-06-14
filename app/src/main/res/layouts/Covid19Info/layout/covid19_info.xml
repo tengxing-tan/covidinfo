@@ -126,7 +126,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!--recycler view for displaying our courses-->
+        <!--recycler layouts for displaying our courses-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

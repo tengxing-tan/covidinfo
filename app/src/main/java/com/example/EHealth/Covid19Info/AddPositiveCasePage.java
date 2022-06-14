@@ -24,7 +24,7 @@ public class AddPositiveCasePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_positive_case_page);
+        setContentView(R.layout.add_positive_case_page);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         inputIcNumber = findViewById(R.id.inputIcNumber);

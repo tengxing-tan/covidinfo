@@ -34,7 +34,7 @@ public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // on below line we are inflating our layout
-        // file for our recycler view items.
+        // file for our recycler layouts items.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rcviewe_covid19_case, parent, false);
         return new ViewHolder(view);
     }
@@ -49,7 +49,7 @@ public class UpdateCovid19CaseAdapter extends RecyclerView.Adapter<UpdateCovid19
         holder.case_type_txt.setText(model.getCaseType());
         holder.is_active_txt.setText((model.getIsActive() != 0) ? "(active)" : "(inactive)");
 
-        // make rc view clickable and user can edit covid title and content
+        // make rc layouts clickable and user can edit covid title and content
         holder.itemView.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {

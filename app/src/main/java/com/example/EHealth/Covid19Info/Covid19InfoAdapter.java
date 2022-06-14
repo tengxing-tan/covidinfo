@@ -33,7 +33,7 @@ public class Covid19InfoAdapter extends RecyclerView.Adapter<Covid19InfoAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // on below line we are inflating our layout
-        // file for our recycler view items.
+        // file for our recycler layouts items.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rcview_covid19_info, parent, false);
         return new ViewHolder(view);
     }

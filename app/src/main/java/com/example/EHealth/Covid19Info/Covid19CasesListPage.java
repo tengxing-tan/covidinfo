@@ -18,7 +18,7 @@ public class Covid19CasesListPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_covid19_cases_list_page);
+        setContentView(R.layout.covid19_cases_list_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /**
@@ -35,11 +35,11 @@ public class Covid19CasesListPage extends AppCompatActivity {
         UpdateCovid19CaseAdapter adapter = new UpdateCovid19CaseAdapter (covid19CaseModelArrayList, Covid19CasesListPage.this);
         RecyclerView rv = findViewById(R.id.rvCovid19Case);
 
-        // setting layout manager for recycler view
+        // setting layout manager for recycler layouts
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Covid19CasesListPage.this, RecyclerView.VERTICAL, false);
         rv.setLayoutManager(linearLayoutManager);
 
-        // setting our adapter to recycler view.
+        // setting our adapter to recycler layouts.
         rv.setAdapter(adapter);
     }
 }

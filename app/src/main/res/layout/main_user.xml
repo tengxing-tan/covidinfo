@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5E3F8"
-    tools:context=".MainActivity">
-
+    tools:context=".MainUser">
 
     <Button
         android:id="@+id/buttonLogout"
@@ -28,7 +27,7 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/buttonGotoCovidInfo"
+        android:id="@+id/buttonGoToCovidInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -36,14 +35,14 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primaryColor"
         android:padding="12sp"
-        android:text="Latest Information"
+        android:text="Covid-19 Information"
         app:cornerRadius="36dp"
         app:icon="@drawable/ic_round_article"
         app:iconSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGotoCheckIn" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGotoVaccine" />
 
     <Button
         android:id="@+id/buttonGotoUserProfile"
@@ -76,8 +75,9 @@
         app:icon="@drawable/syringe"
         app:iconSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGotoUserProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGotoQuarantineCenter" />
 
     <Button
         android:id="@+id/buttonGotoCheckIn"
@@ -90,11 +90,12 @@
         android:padding="12sp"
         android:text="Check-in"
         app:cornerRadius="120dp"
-        app:icon="@drawable/gps"
+        app:icon="@drawable/scan_barcode"
         app:iconSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGotoVaccine" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGotoUserProfile" />
 
     <Button
         android:id="@+id/buttonGotoQuarantineCenter"
@@ -112,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGotoQuarantineCenterRecord" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGotoCheckIn" />
 
     <Button
         android:id="@+id/buttonGotoQuarantineCenterRecord"
@@ -128,22 +129,21 @@
         app:icon="@drawable/ic_baseline_house"
         app:iconSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGotoCovidInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoToCovidInfo" />
 
-    <Button
-        android:id="@+id/buttonGoToManageCovidInfo"
-        android:layout_width="64dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="640dp"
-        android:backgroundTint="@color/primaryColor"
-        app:cornerRadius="120dp"
-        app:icon="@drawable/ic_round_article"
-        app:iconSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="User"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

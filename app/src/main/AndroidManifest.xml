@@ -9,39 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covidinfo">
-        
-        <!-- MANAGE COVID-19 INFO PAGE -->
+
         <activity
-            android:name="com.example.EHealth.Covid19Info.ManageCovid19InfoPage"
-            android:exported="true"
-            android:parentActivityName="com.example.EHealth.MainActivity" />
-        <activity
-            android:name="com.example.EHealth.Covid19Info.AddPositiveCasePage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
-        <activity
-            android:name="com.example.EHealth.Covid19Info.Covid19CasesListPage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
-        <activity
-            android:name="com.example.EHealth.Covid19Info.UpdateExistingCasePage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
-        <activity
-            android:name="com.example.EHealth.Covid19Info.PublishCovid19InfoPage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
-        <activity
-            android:name="com.example.EHealth.Covid19Info.UpdateCovid19InfoPage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.Covid19Info.ManageCovid19InfoPage" />
-        <!--             USER PAGE: COVID INFO & NOTIFICATION MESSAGE  -->
-        <activity
-            android:name="com.example.EHealth.Covid19Info.Covid19InfoPage"
-            android:exported="false"
-            android:parentActivityName="com.example.EHealth.MainActivity" />
-        <activity
-            android:name="com.example.EHealth.MainActivity"
+            android:name=".MainUser"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,6 +19,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainStaff"
+            android:exported="false" />
+
+
+        <!-- MANAGE COVID-19 INFO PAGE -->
+        <activity
+            android:name=".Covid19Info.ManageCovid19InfoPage"
+            android:exported="true"
+            android:parentActivityName=".MainUser" />
+        <activity
+            android:name=".Covid19Info.AddPositiveCasePage"
+            android:exported="false"
+            android:parentActivityName=".Covid19Info.ManageCovid19InfoPage" />
+        <activity
+            android:name=".Covid19Info.Covid19CasesListPage"
+            android:exported="false"
+            android:parentActivityName=".Covid19Info.ManageCovid19InfoPage" />
+        <activity
+            android:name=".Covid19Info.UpdateExistingCasePage"
+            android:exported="false"
+            android:parentActivityName=".Covid19Info.ManageCovid19InfoPage" />
+        <activity
+            android:name=".Covid19Info.PublishCovid19InfoPage"
+            android:exported="false"
+            android:parentActivityName=".Covid19Info.ManageCovid19InfoPage" />
+        <activity
+            android:name=".Covid19Info.UpdateCovid19InfoPage"
+            android:exported="false"
+            android:parentActivityName=".Covid19Info.ManageCovid19InfoPage" />
+
+        <!-- USER PAGE: COVID INFO & NOTIFICATION MESSAGE -->
+        <activity
+            android:name=".Covid19Info.Covid19InfoPage"
+            android:exported="false"
+            android:parentActivityName=".MainUser" />
+
     </application>
 
 </manifest>

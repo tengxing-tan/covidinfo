@@ -24,7 +24,7 @@ public class PublishCovid19InfoPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_publish_covid19_info);
+        setContentView(R.layout.publish_covid19_info);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         inputTitle = findViewById(R.id.inputTitle);
